@@ -1,0 +1,29 @@
+@font-face {
+  font-family: 'NunitoSans';
+  font-style: normal;
+  font-weight: 300;
+  font-display: swap;
+  src:
+    url('../fonts/NunitoSans-Light.woff2') format('woff2'),
+    url('../fonts/NunitoSans-Light.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'NunitoSans';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src:
+    url('../fonts/NunitoSans-Regular.woff2') format('woff2'),
+    url('../fonts/NunitoSans-Regular.woff') format('woff');
+}
+
+@font-face {
+  font-family: 'AcherusFeral';
+  font-style: normal;
+  font-weight: 700;
+  font-display: swap;
+  src:
+    url('../fonts/AcherusFeral-Bold.woff2') format('woff2'),
+    url('../fonts/AcherusFeral-Bold.woff') format('woff');
+}

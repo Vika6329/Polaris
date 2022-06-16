@@ -1,0 +1,38 @@
+.info {
+  background-color: $white;
+
+  &__item {
+    font-size: 75px;
+    color: $black;
+    @extend %acherus;
+    max-width: 840px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 200px 0 120px;
+
+    background: linear-gradient(-45deg, #C9C9C9 50%, $black 50%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    @include mq('tablet-2') {
+      padding: 150px 0 90px;
+      font-size: 50px;
+    }
+
+    @include mq('tablet') {
+      padding: 100px 0 70px;
+      font-size: 30px;
+    }
+
+    @include mq('phone') {
+      padding: 50px 0;
+      font-size: 25px;
+    }
+
+  }
+
+  &__img {
+    width: 100%;
+  }
+
+}
