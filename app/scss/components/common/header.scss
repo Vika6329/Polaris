@@ -20,9 +20,31 @@
   height: 100vh;
 
   &__top {
-    position: relative;
+    position: fixed;
     padding: 34px 83px 35px 53px;
     border-bottom: 1px solid rgba($white, 0.5);
+    top: 0;
+    right: 0;
+    left: 0;
+    z-index: 10;
+    transition: background-color 0.5s,
+      padding 0.5s;
+
+    &.fixed {
+      background-color: $accent;
+
+      @include mq('desktop') {
+        padding: 25px 83px 25px 52px;
+      }
+
+      @include mq('tablet-2') {
+        padding: 20px 83px 20px 52px;
+      }
+
+      @include mq('tablet-2') {
+        padding: 15px 20px;
+      }
+    }
 
     @include mq('tablet') {
       padding: 15px;
