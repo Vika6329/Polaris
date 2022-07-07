@@ -1,0 +1,199 @@
+.stages {
+  position: relative;
+  padding: 180px 0;
+  background-color: $white;
+
+  @include mq('desktop') {
+    padding: 110px 0;
+  }
+
+  @include mq('tablet-2') {
+    padding: 90px 0;
+  }
+
+  @include mq('tablet') {
+    padding: 70px 0;
+  }
+
+  @include mq('phone') {
+    padding: 50px 0;
+  }
+
+  &::after {
+    @include pseudo;
+    max-width: 480px;
+    width: 100%;
+    background-color: $accent;
+    top: 0;
+    bottom: 0;
+    right: 0;
+
+    @include mq('tablet-2') {
+      max-width: 350px;
+    }
+
+    @include mq('tablet') {
+      display: none;
+    }
+  }
+
+  &__container {
+    max-width: 550px;
+    margin: 0 auto;
+    padding: 0 15px;
+
+    @include mq('desktop') {
+      margin-right: -20px;
+    }
+
+    @include mq('tablet-2') {
+      max-width: 400px;
+    }
+
+    @include mq('tablet') {
+      max-width: 100%;
+    }
+
+    @include mq('phone') {
+      max-width: 370px;
+    }
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @include mq('tablet') {
+      flex-direction: column;
+    }
+  }
+
+  &__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 57px;
+    height: 57px;
+    border-radius: 50%;
+    background-color: $title;
+
+    @include mq('tablet') {
+      display: none;
+    }
+  }
+
+  &__arrow {
+    fill: $white;
+    transform: rotate(90deg);
+    width: 15px;
+    height: 15px;
+  }
+
+  &__title {
+    font-size: 40px;
+    color: $black;
+    max-width: 330px;
+    width: 100%;
+    @extend %acherus;
+    // margin-left: -120px;
+    margin-top: 135px;
+
+    @include mq('tablet') {
+      max-width: 100%;
+      margin-top: 0;
+      margin-bottom: 35px;
+    }
+
+    @include mq('phone') {
+      font-size: 23px;
+    }
+  }
+
+  .swiper {
+    max-width: 690px;
+    width: 100%;
+    margin: 0;
+
+    // @include mq('tablet-2') {
+    //   border-radius: 20px 0 0 20px;
+    // }
+  }
+
+  .swiper-slide {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background-color: #C9CEF7;
+    border-radius: 12px;
+    height: 350px;
+    width: 270px !important;
+    padding: 35px;
+    color: $accent;
+
+    &::before {
+      @include pseudo;
+      width: 54px;
+      height: 53px;
+      top: 30px;
+      left: 40px;
+      @extend %bg;
+    }
+
+    &--phone {
+      &::before {
+        background-image: url('../images/stages/phone.png');
+      }
+    }
+
+    &--hands {
+      &::before {
+        background-image: url('../images/stages/hands.png');
+      }
+    }
+
+    &--document {
+      &::before {
+        background-image: url('../images/stages/document.png');
+      }
+    }
+
+    &--visa {
+      &::before {
+        background-image: url('../images/stages/visa.png');
+      }
+    }
+
+    &--money {
+      &::before {
+        background-image: url('../images/stages/money.png');
+      }
+    }
+  }
+
+  &__name {
+    font-size: 20px;
+    @extend %acherus;
+    margin-bottom: 25px;
+    margin-top: 133px;
+  }
+
+  &__item {
+    background-color: $accent !important;
+    color: $white !important;
+    justify-content: end;
+  }
+
+  &__box {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    height: 500px;
+    width: 660px;
+
+    @include mq('tablet') {
+      height: auto;
+      width: 100%;
+    }
+  }
+}

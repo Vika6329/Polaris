@@ -1,0 +1,96 @@
+.modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  background-color: #1B1B1B;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: $white;
+  display: none;
+  z-index: 10;
+
+  &__wrapper {
+    position: relative;
+    background-color: #1F1F1F;
+    padding: 25px;
+    height: 300px;
+    width: 350px;
+    margin: auto;
+    transform: translateY(75%);
+    animation-name: animatetop;
+    animation-duration: 0.4s;
+  }
+
+  @keyframes animatetop {
+    from {
+      top: -300px;
+      opacity: 0
+    }
+
+    to {
+      top: 0;
+      opacity: 1
+    }
+  }
+
+  &__close {
+    position: absolute;
+    cursor: pointer;
+    width: 44px;
+    height: 44px;
+    right: 15px;
+    top: 15px;
+
+    &::after,
+    &::before {
+      @include pseudo;
+      height: 1px;
+      width: 15px;
+      background-color: $white;
+      right: 15px;
+      top: 15px;
+    }
+
+    &::after {
+      transform: rotate(45deg);
+    }
+
+    &::before {
+      transform: rotate(-45deg);
+    }
+  }
+
+  &__title {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 1;
+    margin-bottom: 35px;
+  }
+
+  &__input {
+    width: 100%;
+    background-color: transparent;
+    border-bottom: 1px solid $white;
+
+
+    &::placeholder {
+      color: $white;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__textarea {
+    resize: none;
+  }
+
+  &__button {
+    color: $white;
+  }
+}

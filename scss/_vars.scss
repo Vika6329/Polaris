@@ -1,0 +1,22 @@
+%acherus {
+  font-family: 'AcherusFeral', sans-serif;
+  font-weight: 700;
+}
+
+$black: #000;
+$text: #545454;
+$title: #1F1F1F;
+$white: #fff;
+$accent: #3B47B2;
+
+%bg{
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+%mask{
+  mask-repeat: no-repeat;
+  mask-position: center;
+  mask-size: cover;
+}
